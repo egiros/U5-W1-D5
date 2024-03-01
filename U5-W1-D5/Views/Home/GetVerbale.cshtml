@@ -1,0 +1,75 @@
+﻿@model IEnumerable<U5_W1_D5.Models.Verbale>
+
+@{
+    ViewBag.Title = "GetVerbale";
+}
+
+<div style="margin-top: 130px"></div>
+<h2 class="text-center">Lista Verbali</h2>
+
+<p>
+    @Html.ActionLink("Crea Nuovo", "CreateVerbale", new { }, new { @class = "btn btn-sm btn-warning py-2" }) |
+    @Html.ActionLink("Indietro", "Index", new { }, new { @class = "btn btn-sm btn-outline-warning py-2" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Indirizzo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Agente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataVerbale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PuntiDecurtati)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idanagrafica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idviolazione)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Indirizzo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Agente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataVerbale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PuntiDecurtati)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idanagrafica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idviolazione)
+        </td>
+        <td>
+            @Html.ActionLink("Contesta", "EditVerbale", new { id = item.Id }, new { @class = "btn btn-sm btn-warning py-2" })
+        </td>
+    </tr>
+}
+
+</table>

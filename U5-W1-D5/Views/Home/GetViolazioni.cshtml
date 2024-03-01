@@ -1,0 +1,40 @@
+﻿@model IEnumerable<U5_W1_D5.Models.TipoViolazione>
+
+@{
+    ViewBag.Title = "GetViolazioni";
+}
+
+<div style="margin-top: 130px"></div>
+<h2 class="text-center">Lista Violazioni</h2>
+
+<p>
+    @Html.ActionLink("Crea Nuova", "CreateViolazione", new { }, new { @class = "btn btn-sm btn-warning py-2" }) |
+    @Html.ActionLink("Indietro", "Index", new { }, new { @class = "btn btn-sm btn-outline-warning py-2" })
+</p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idviolazione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descrizione)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idviolazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrizione)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-sm btn-warning py-2" }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-sm btn-warning py-2" })
+            </td>
+        </tr>
+    }
+    
+    </table>

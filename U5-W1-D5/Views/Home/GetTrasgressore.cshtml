@@ -1,0 +1,66 @@
+﻿@model IEnumerable<U5_W1_D5.Models.Anagrafica>
+
+@{
+    ViewBag.Title = "GetTrasgressore";
+}
+
+<div style="margin-top: 130px"></div>
+<h2 class="text-center">Anagrafica Trasgressori</h2>
+
+<p>
+    @Html.ActionLink("Crea Nuovo", "CreateTrasgressore", new { }, new { @class = "btn btn-sm btn-warning py-2" }) |
+    @Html.ActionLink("Indietro", "Index", new { }, new { @class = "btn btn-sm btn-outline-warning py-2" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cognome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Indirizzo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Citta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodiceFiscale)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indirizzo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Citta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodiceFiscale)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditTrasgressore", new { id = item.Id }, new { @class = "btn btn-sm btn-warning py-2" }) |
+                @Html.ActionLink("Delete", "DeleteTrasgressore", new { id = item.Id }, new { @class = "btn btn-sm btn-warning py-2" })
+            </td>
+        </tr>
+
+    }
+
+</table>

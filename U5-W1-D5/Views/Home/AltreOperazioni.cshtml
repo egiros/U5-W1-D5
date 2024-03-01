@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AltreOperazioni";
+}
+
+<div class="container-sm" style="margin-top: 130px">
+    <h2 class="text-center">AltreOperazioni</h2>
+    <div class="row row-cols-1 text-center g-3 my-5">
+        <div class="col">
+                @Html.ActionLink("Totale Verbali raggruppati per Trasgressore.", "TotalVerbaliPerTrasgressore", new { }, new { @class = "btn btn-primary  w-75 p-3" })
+        </div>
+        <div class="col">
+                @Html.ActionLink("Totale Punti Decurtati per Trasgressore.", "Index", new { }, new { @class = "btn btn-primary  w-75 p-3" })
+        </div>
+        <div class="col">
+            @Html.ActionLink("Importo, Cognome, Nome, Data di Violazione e Decurtamento punti delle Violazioni che Superano i 10 Punti.", "Index", new { }, new { @class = "btn btn-primary  w-75 p-3" })
+        </div>
+        <div class="col">
+            @Html.ActionLink("Violazioni con Importo Superiore a 400 euro.", "Index", new { }, new { @class = "btn btn-primary  w-75 p-3" })
+        </div>
+    </div>
+    @Html.ActionLink("Indietro", "Index", new { }, new { @class = "btn btn-sm btn-outline-warning py-2" })
+</div>
+
+
