@@ -1,0 +1,89 @@
+﻿@model IEnumerable<U5_W1_D5.Models.Verbale>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetVerbaliDecurtamentoPuntiMaggioreDi10</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Indirizzo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataVerbale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Importo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PuntiDecurtati)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idanagrafica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idviolazione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotaleVerbaliPerAnagrafe)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indirizzo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataVerbale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PuntiDecurtati)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idanagrafica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idviolazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotaleVerbaliPerAnagrafe)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

@@ -126,6 +126,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Anagrafica.cs" />
+    <Compile Include="Models\Punti.cs" />
     <Compile Include="Models\TipoViolazione.cs" />
     <Compile Include="Models\Verbale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -192,7 +193,10 @@
     <Content Include="Views\Home\GetVerbale.cshtml" />
     <Content Include="Views\Home\CreateVerbale.cshtml" />
     <Content Include="Views\Home\GetViolazioni.cshtml" />
-    <Content Include="Views\AltroControllers\TotalVerbaliPerTrasgressore.cshtml" />
+    <Content Include="Views\AltroControllers\GetVerbaleSopra400.cshtml" />
+    <Content Include="Views\AltroControllers\GetVerbaliDecurtamentoPuntiMaggioreDi10.cshtml" />
+    <Content Include="Views\AltroControllers\VerbaliPerTrasgressore.cshtml" />
+    <Content Include="Views\AltroControllers\Puntidecurtati.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

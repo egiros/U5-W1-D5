@@ -17,8 +17,7 @@ namespace U5_W1_D5.Models
         public int idanagrafica { get; set; }
         public int idviolazione { get; set; }
 
-        public Trasgressore Trasgressore { get; set; }
-        public Violazione Violazione { get; set; }
+        public int TotaleVerbaliPerAnagrafe { get; set; }
 
     }
 }
